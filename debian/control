@@ -1,0 +1,49 @@
+Source: python-distro
+Section: python
+Priority: extra
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Barry Warsaw <barry@debian.org>,
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3~),
+               python-setuptools,
+               python3-all,
+               python3-setuptools,
+Standards-Version: 3.9.8
+Homepage: https://github.com/nir0s/distro
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-distro.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-distro.git
+
+Package: python-distro
+Architecture: all
+Depends: lsb-release,
+         ${misc:Depends},
+         ${python:Depends},
+Description: Linux OS platform information API
+ distro (for: Linux Distribution) provides information about the Linux
+ distribution it runs on, such as a reliable machine-readable ID, or version
+ information.
+ .
+ It is a renewed alternative implementation for Python's original
+ platform.linux_distribution function, but it also provides much more
+ functionality which isn't necessarily Python bound like a command-line
+ interface.
+ .
+ This is the Python 2 version of the library.
+
+Package: python3-distro
+Architecture: all
+Depends: lsb-release,
+         ${misc:Depends},
+         ${python3:Depends},
+Description: Linux OS platform information API
+ distro (for: Linux Distribution) provides information about the Linux
+ distribution it runs on, such as a reliable machine-readable ID, or version
+ information.
+ .
+ It is a renewed alternative implementation for Python's original
+ platform.linux_distribution function, but it also provides much more
+ functionality which isn't necessarily Python bound like a command-line
+ interface.
+ .
+ This is the Python 2 version of the library.

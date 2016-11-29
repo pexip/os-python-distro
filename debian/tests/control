@@ -1,0 +1,11 @@
+Test-Command: cd "$ADTTMP" ; python -c "import distro; print distro"
+Depends: python-distro
+
+Test-Command: cd "$ADTTMP" ; python3 -c "import distro; print(distro)"
+Depends: python3-distro
+
+Tests: api-2.py
+Depends: python-distro
+
+Tests: api-3.py
+Depends: python3-distro

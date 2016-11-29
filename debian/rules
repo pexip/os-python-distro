@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=distro
+#export PYBUILD_VERBOSE=1
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+# For now, I do not want to distribute /usr/bin/distro
+
+override_dh_python3:
+	dh_python3
+	rm -rf debian/python3-distro/usr/bin
+
+override_dh_python2:
+	dh_python2
+	rm -rf debian/python-distro/usr/bin

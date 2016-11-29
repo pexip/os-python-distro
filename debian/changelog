@@ -1,0 +1,12 @@
+python-distro (1.0.1-2) unstable; urgency=medium
+
+  * d/control: Depend on lsb-release for better information gathering.
+  * d/tests: Added.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 29 Nov 2016 12:13:06 -0500
+
+python-distro (1.0.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #846155)
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 28 Nov 2016 15:42:36 -0500
