@@ -1,5 +1,6 @@
-Format: http://dep.debian.net/deps/dep5
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: distro
+Upstream-Contact: Nir Cohen <nir36g@gmail.com>
 Source: <https://pypi.python.org/pypi/distro/>
 
 Files: *
@@ -24,4 +25,4 @@ License: Apache-2.0
  limitations under the License.
  .
  On Debian systems, the full text of the Apache License version 2.0 can be
- found in the file `/usr/share/common-licenses/Apache-2.0
+ found in the file `/usr/share/common-licenses/Apache-2.0`.

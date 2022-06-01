@@ -1,43 +1,30 @@
 Source: python-distro
 Section: python
-Priority: extra
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-XSBC-Pexip-Original-Uploaders: Barry Warsaw <barry@debian.org>,
-Build-Depends: debhelper (>= 9),
-               dh-python,
-               python-all (>= 2.6.6-3~),
-               python-setuptools,
-               python3-all,
-               python3-setuptools,
-Standards-Version: 3.9.8
+Priority: optional
+Uploaders:
+ Barry Warsaw <barry@debian.org>,
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+Build-Depends-Indep:
+ python3-pytest,
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
 Homepage: https://github.com/nir0s/distro
-Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-distro.git
-Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-distro.git
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-distro.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-distro
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
-
-Package: python-distro
-Architecture: all
-Depends: lsb-release,
-         ${misc:Depends},
-         ${python:Depends},
-Description: Linux OS platform information API
- distro (for: Linux Distribution) provides information about the Linux
- distribution it runs on, such as a reliable machine-readable ID, or version
- information.
- .
- It is a renewed alternative implementation for Python's original
- platform.linux_distribution function, but it also provides much more
- functionality which isn't necessarily Python bound like a command-line
- interface.
- .
- This is the Python 2 version of the library.
 
 Package: python3-distro
 Architecture: all
-Depends: lsb-release,
-         ${misc:Depends},
-         ${python3:Depends},
+Depends:
+ lsb-release,
+ ${misc:Depends},
+ ${python3:Depends},
 Description: Linux OS platform information API
  distro (for: Linux Distribution) provides information about the Linux
  distribution it runs on, such as a reliable machine-readable ID, or version
@@ -48,4 +35,4 @@ Description: Linux OS platform information API
  functionality which isn't necessarily Python bound like a command-line
  interface.
  .
- This is the Python 2 version of the library.
+ This is the Python 3 version of the library.
