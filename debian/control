@@ -17,7 +17,7 @@ Rules-Requires-Root: no
 Homepage: https://github.com/nir0s/distro
 Vcs-Git: https://salsa.debian.org/python-team/modules/python-distro.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/python-distro
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: python3-distro
 Architecture: all
