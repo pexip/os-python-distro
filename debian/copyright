@@ -1,14 +1,15 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: distro
 Upstream-Contact: Nir Cohen <nir36g@gmail.com>
-Source: <https://pypi.python.org/pypi/distro/>
+Source: https://github.com/python-distro/distro
 
 Files: *
-Copyright: 2015,2016 Nir Cohen
+Copyright: 2015-2020, Nir Cohen
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2016 Barry Warsaw <barry@debian.org>
+Copyright: 2016, Barry Warsaw <barry@debian.org>
+           2021, Stefano Rivera <stefanor@debian.org>
 License: Apache-2.0
 
 License: Apache-2.0

@@ -1,3 +1,2 @@
-version=3
-opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
-https://pypi.debian.net/distro/distro-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+version=4
+https://github.com/python-distro/distro/tags .*/v?@ANY_VERSION@@ARCHIVE_EXT@

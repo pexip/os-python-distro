@@ -1,7 +1,6 @@
-
-.. _distro official repo: https://github.com/nir0s/distro
-.. _distro issue tracker: https://github.com/nir0s/distro/issues
-.. _open issues on missing test data: https://github.com/nir0s/distro/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22>
+.. _distro official repo: https://github.com/python-distro/distro
+.. _distro issue tracker: https://github.com/python-distro/distro/issues
+.. _open issues on missing test data: https://github.com/python-distro/distro/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22>
 
 
 **distro** package (Linux Distribution) version |version|
@@ -20,19 +19,19 @@ If you want to jump into the API description right away, read about the
 Compatibility
 =============
 
-The ``distro`` package is supported on Python 2.7, 3.4+ and PyPy, and on
-any Linux or *BSD distribution that provides one or more of the `data sources`_
-used by this package.
+The ``distro`` package is supported on Python 3.6+ and PyPy, and on any Linux
+or BSD distribution that provides one or more of the `data sources`_ used by
+this package.
 
-This package is tested on Python 2.7, 3.4+ and PyPy, with test data that
-mimics the exact behavior of the data sources of
-`a number of Linux distributions <https://github.com/nir0s/distro/tree/master/tests/resources/distros>`_.
+This package is tested on Python 3.6+ and PyPy, with test data that mimics the
+exact behavior of the data sources of `a number of Linux distributions
+<https://github.com/python-distro/distro/tree/master/tests/resources/distros>`_.
 
 If you want to add test data for more distributions, please
 create an issue in the `distro issue tracker`_
 and provide the following information in the issue:
 
-* The content of the `/etc/os-release` file, if any.
+* The os-release file `/etc/os-release` if present, with a fall-back on `/usr/lib/os-release` if needed.
 * The file names and content of the `/etc/*release` and `/etc/*version` files, if any.
 * The output of the command: `lsb_release -a`, if available.
 * The file names and content of any other files you are aware of that provide
@@ -54,7 +53,7 @@ namely from these data sources:
 
 * The `distro release file`_, if present.
 
-* The `uname command output`_, if present.
+* The ``uname`` command output, if present.
 
 
 Access to the information
@@ -81,12 +80,11 @@ distribution:
   will come from the distro release file (because it is not provided by the
   lsb_release command).
 
-  Examples: :func:`distro.id` for retrieving
-  the distro ID, or :func:`ld.info` to get the machine-readable part of the
-  information in a more aggregated way, or :func:`distro.linux_distribution` with
-  an interface that is compatible to the original
-  :py:func:`platform.linux_distribution` function, supporting a subset of its
-  parameters.
+  Examples: :func:`distro.id` for retrieving the distro ID, or
+  :func:`distro.info` to get the machine-readable part of the information in a
+  more aggregated way, or :func:`distro.linux_distribution` with an interface
+  that is compatible to the original :py:func:`platform.linux_distribution`
+  function, supporting a subset of its parameters.
 
 * `Single source accessor functions`_
 
@@ -148,9 +146,11 @@ accessor functions.
 .. autofunction:: distro.os_release_info
 .. autofunction:: distro.lsb_release_info
 .. autofunction:: distro.distro_release_info
+.. autofunction:: distro.uname_info
 .. autofunction:: distro.os_release_attr
 .. autofunction:: distro.lsb_release_attr
 .. autofunction:: distro.distro_release_attr
+.. autofunction:: distro.uname_attr
 
 LinuxDistribution class
 =======================
@@ -184,7 +184,8 @@ Os-release file
 ===============
 
 The os-release file is looked up using the path name ``/etc/os-release``. Its
-optional additional location ``/usr/lib/os-release`` is ignored.
+optional additional location ``/usr/lib/os-release`` would be looked up for if
+the former couldn't be read.
 
 The os-release file is expected to be encoded in UTF-8.
 
@@ -473,4 +474,3 @@ The following information items can be found in a distro release file
     version_id                       "42.1"
     codename                         "x86_64"
     ===============================  ==========================================
-

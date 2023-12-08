@@ -1,4 +1,10 @@
+---
 Bug-Database: https://github.com/nir0s/distro/issues
 Bug-Submit: https://github.com/nir0s/distro/issues/new
+Changelog: https://github.com/python-distro/distro/blob/master/CHANGELOG.md
+Documentation: https://distro.readthedocs.io/
+Registry:
+  - Name: PyPI
+    Entry: distro
 Repository: https://github.com/nir0s/distro.git
 Repository-Browse: https://github.com/nir0s/distro
