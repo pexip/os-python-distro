@@ -4,12 +4,12 @@ Upstream-Contact: Nir Cohen <nir36g@gmail.com>
 Source: https://github.com/python-distro/distro
 
 Files: *
-Copyright: 2015-2020, Nir Cohen
+Copyright: 2015-2023, Nir Cohen
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2016, Barry Warsaw <barry@debian.org>
-           2021, Stefano Rivera <stefanor@debian.org>
+Copyright: 2016,      Barry Warsaw <barry@debian.org>
+           2021-2023, Stefano Rivera <stefanor@debian.org>
 License: Apache-2.0
 
 License: Apache-2.0

@@ -11,7 +11,7 @@ Build-Depends:
  python3-all,
  python3-setuptools
 Build-Depends-Indep: python3-pytest
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://github.com/python-distro/distro
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-distro.git
